@@ -1,0 +1,110 @@
+.title {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--fontcolor);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.container [class^="card"] {
+  border: 1px solid var(--card-border);
+  background: var(--card-background);
+  margin: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  color: var(--fontcolor);
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 20px var(--card-border);
+  }
+}
+
+.card1 {
+  cursor: crosshair;
+}
+.card2 {
+  cursor: help;
+}
+.card3 {
+  cursor: move;
+}
+.card4 {
+  cursor: pointer;
+}
+.card5 {
+  cursor: progress;
+}
+.card6 {
+  cursor: text;
+}
+.card7 {
+  cursor: wait;
+}
+.card8 {
+  cursor: vertical-text;
+}
+.card9 {
+  cursor: alias;
+}
+.card10 {
+  cursor: no-drop;
+}
+.card11 {
+  cursor: grab;
+}
+.card12 {
+  cursor: grabbing;
+}
+.card13 {
+  cursor: zoom-in;
+}
+.card14 {
+  cursor: zoom-out;
+}
+.card15 {
+  cursor: not-allowed;
+}
+.card16 {
+  cursor: cell;
+}
+.card17 {
+  cursor: copy;
+}
+.card18 {
+  cursor: ew-resize;
+}
+.card19 {
+  cursor: ns-resize;
+}
+.card20 {
+  cursor: nwse-resize;
+}
+.card21 {
+  cursor: nwse-resize;
+}
+.card22 {
+  cursor: nesw-resize;
+}
+.card23 {
+  cursor: row-resize;
+}
+.card24 {
+  cursor: all-scroll;
+}
+.card25 {
+  cursor: context-menu;
+}
+.card26 {
+  cursor: none;
+}
