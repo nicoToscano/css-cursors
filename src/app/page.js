@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <h1 className="title">CSS Cursor Property</h1>
       <div className="container">
+        <div className="card card0">default</div>
         <div className="card card1">crosshair</div>
         <div className="card card2">help</div>
         <div className="card card3">move</div>
@@ -32,6 +33,9 @@ export default function Home() {
         <div className="card card24">all-scroll</div>
         <div className="card card25">context-menu</div>
         <div className="card card26">none</div>
+        <div className="card card27">zoom-in</div>
+        <div className="card card28">zoom-out</div>
+        <div className="card card29">url</div>
       </div>
     </>
   );

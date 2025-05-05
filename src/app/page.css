@@ -108,3 +108,12 @@
 .card26 {
   cursor: none;
 }
+.card27 {
+  cursor: zoom-in;
+}
+.card28 {
+  cursor: zoom-out;
+}
+.card29 {
+  cursor: url('/cursor.cur'), auto;
+}
