@@ -1,20 +1,16 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-  --fontcolor: #e0e0e0;
-  --card-background: linear-gradient(145deg, #1f1f1f, #292929);
-  --card-border: #00ffe0;
-  --bgcolor: #121212;
-  --highlight: #00ffe0;
+  --fontcolor: #031b4e;
+  --card-background: #f2f8ff;
+  --card-border: rgb(228, 228, 228);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --fontcolor: #ffffff;
-    --card-background: rgba(74, 41, 136, 0.1);
-    --card-border: rgb(74, 41, 136);
+    --background: #ffffff;
+    --fontcolor: #031b4e;
+    --card-background: #f2f8ff;
+    --card-border: rgb(228, 228, 228);
   }
 }
 
