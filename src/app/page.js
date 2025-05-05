@@ -1,10 +1,41 @@
-import Image from "next/image";
+"use client";
+
 import "./page.css";
+import { gsap } from "gsap";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+import { useEffect } from "react";
 
 export default function Home() {
+  
+  gsap.registerPlugin(ScrambleTextPlugin);
+
+ // Ejecutar al cargar la página
+  useEffect( () => {
+    gsap.to(".title", {
+      scrambleText: {
+        text: "CSS Cursor Property",
+        chars: "upperAndLowerCase",
+        revealDelay: 0.2,
+        tweenLength: false,
+      },
+      ease: "power2.inOut",
+      overwrite: "auto",
+      duration: 2,
+    });
+  });
+
   return (
     <>
-      <h1 className="title">CSS Cursor Property</h1>
+      <h1 className="title"></h1>
+      <div className="description">
+        <p className="description-text">
+          The CSS cursor property is used to specify the type of cursor to be
+          displayed when pointing over an element. The cursor is typically
+          displayed as a pointer, hand, or arrow, depending on the value of the
+          cursor property.
+        </p>
+        <div className="description-note">Click on the card to copy the CSS code</div>
+      </div>
       <div className="container">
         <div className="card card0">default</div>
         <div className="card card1">crosshair</div>
