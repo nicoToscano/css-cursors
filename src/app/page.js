@@ -6,11 +6,11 @@ import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { useEffect } from "react";
 
 export default function Home() {
-  
   gsap.registerPlugin(ScrambleTextPlugin);
 
- // Ejecutar al cargar la página
-  useEffect( () => {
+  // Ejecutar al cargar la página
+  useEffect(() => {
+    // Scramble text for the title
     gsap.to(".title", {
       scrambleText: {
         text: "CSS Cursor Property",
@@ -22,21 +22,35 @@ export default function Home() {
       overwrite: "auto",
       duration: 2,
     });
-  });
+
+    // Scramble text for each card
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      const originalText = card.textContent;
+      gsap.to(card, {
+        scrambleText: {
+          text: originalText,
+          chars: "upperAndLowerCase",
+          revealDelay: 0.2,
+          tweenLength: false,
+        },
+        ease: "power2.inOut",
+        overwrite: "auto",
+        duration: 1.5,
+        delay: Math.random() * 0.5, // Add a slight delay for each card
+      });
+    });
+  }, []);
 
   return (
-    <>
-      <h1 className="title"></h1>
+    <div className="container">
+      <h1 className="title">CSS Cursor Property</h1>
       <div className="description">
-        <p className="description-text">
-          The CSS cursor property is used to specify the type of cursor to be
-          displayed when pointing over an element. The cursor is typically
-          displayed as a pointer, hand, or arrow, depending on the value of the
-          cursor property.
-        </p>
-        <div className="description-note">Click on the card to copy the CSS code</div>
+        <div className="description-note">
+          Click on the card to copy the CSS code
+        </div>
       </div>
-      <div className="container">
+      <div className="container-cards">
         <div className="card card0">default</div>
         <div className="card card1">crosshair</div>
         <div className="card card2">help</div>
@@ -68,6 +82,6 @@ export default function Home() {
         <div className="card card28">zoom-out</div>
         <div className="card card29">url</div>
       </div>
-    </>
+    </div>
   );
 }
